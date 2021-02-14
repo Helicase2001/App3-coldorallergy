@@ -101,9 +101,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	</div>
 	<!-- redirected button pointer -->
 	
-	<a href="#two" class="w3-btn w3-grey w3-round"> Yes </a>
-	<button onclick="myFunction()">Copy Text</button>
-	<a href="#two" class="w3-btn w3-grey w3-round"> No </a>
+	<a href="#two" class="w3-btn w3-grey w3-round" onclick="allergyCount()" onclick= "coldCount()"> Yes </a>
+	<a href="#two" class="w3-btn w3-grey w3-round" onclick="allergyCount"> No </a>
 </div>
 
 <div class="page" id="two">
@@ -111,10 +110,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<h1>Question 2</h1>
 	</div>
 	
+<!-- cold-denoting question -->
 	<div id="content" class="w3-container">
 		<p>Is a fever present?</p>
 	</div>
-	<a href="#three" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#three" class="w3-btn w3-grey w3-round" onclick="coldCount"> Yes </a>
 	<a href="#three" class="w3-btn w3-grey w3-round"> No </a>
 </div>	
 	
@@ -122,14 +122,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
 	</div>
-	
+
+<!-- cold denoting question -->
 	<div id="content" class="w3-container">
 		<p>Are chills present?</p>
 	</div>
 	
-	<a href="#four" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#four" class="w3-btn w3-grey w3-round" onclick="coldCount()"> Yes </a>
 	<a href="#four" class="w3-btn w3-grey w3-round"> No </a>
 </div>	
+	
+<div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+
+<!-- cold denoting question -->
+	<div id="content" class="w3-container">
+		<p>You got:</p>
+	</div>
+	
+</div>	
+	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
