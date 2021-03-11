@@ -49,6 +49,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	// adds 1 for each cold symptom
         function coldAdd(){
             cold_count = cold_count + 1;
+		alert(cold_count);
         }
 
   </script>
@@ -100,9 +101,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p>Is a runny nose present?</p>    
     	</div>
 	<!-- redirected button pointer -->
-	
-	<a href="#two" class="w3-btn w3-grey w3-round" onclick="allergyCount()" onclick= "coldCount()"> Yes </a>
-	<a href="#two" class="w3-btn w3-grey w3-round" onclick="allergyCount"> No </a>
+	<!-- adds 1 to coldCount or allergyCount -->
+	<a href="#two" onclick="coldCount" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#two" onclick="allergyCount" class="w3-btn w3-grey w3-round"> No </a>
 </div>
 
 <div class="page" id="two">
@@ -114,8 +115,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Is a fever present?</p>
 	</div>
-	<a href="#three" class="w3-btn w3-grey w3-round" onclick="coldCount"> Yes </a>
-	<a href="#three" class="w3-btn w3-grey w3-round"> No </a>
+	<!-- adds 1 to coldCount or allergyCount -->
+	<a href="#three" onclick="coldCount" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#three" onclick="allergyCount" class="w3-btn w3-grey w3-round"> No </a>
 </div>	
 	
 <div class="page" id="three">
@@ -127,9 +129,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Are chills present?</p>
 	</div>
-	
-	<a href="#four" class="w3-btn w3-grey w3-round" onclick="coldCount()"> Yes </a>
-	<a href="#four" class="w3-btn w3-grey w3-round"> No </a>
+	<!-- adds 1 to coldCount or allergyCount -->
+	<a href="#four" onclick="coldCount" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#four" onclick="allergyCount" class="w3-btn w3-grey w3-round"> No </a>
 </div>	
 	
 <div class="page" id="four">
