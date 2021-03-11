@@ -51,6 +51,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
 		alert(cold_count);
         }
+	//displays results
+	function displayResults(){
+		var coldPercent = cold_count/3 * 100
+		var allergyPercent = allergy_count/3 * 100
+		var resultTxt = document.getElementById("results");
+		resultTxt.innerHTML = "Allergy Probability = " allergyPercent + "%" + "<br> Cold Probability = " coldPercent + "%";
 
   </script>
 
