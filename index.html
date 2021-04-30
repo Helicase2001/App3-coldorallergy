@@ -37,25 +37,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 	// tally for cold or allergy symptoms
+	// sets allergy and cold count = 0 
         var allergy_count = 0;
         var cold_count = 0;
 
 	//adds 1 for each allergy symptom
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		alert(allergy_count);
+		alert(allergy_count); // update allergy count
 
         };
 	// adds 1 for each cold symptom
         function coldAdd(){
             cold_count = cold_count + 1;
-		alert(cold_count);
+		alert(cold_count); // update cold count
         };
 	//displays results
 	function displayResults(){
-		var coldPercent = cold_count/4 * 100
-		var allergyPercent = allergy_count/4 * 100
+	// calculates percentage of answers
+		var coldPercent = cold_count/6 * 100
+		var allergyPercent = allergy_count/6 * 100
 		var resultText = document.getElementById("results");
+		//prints out HTML text
 		resultText.innerHTML = "Allergy Probability = " + allergyPercent + "%" + "<br> Cold Probability = " + coldPercent + "%";
 	};
   </script>
@@ -115,6 +118,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
+	<!-- question 2 header -->	
 		<h1>Question 2</h1>
 	</div>
 	
@@ -125,11 +129,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#three" onclick="coldAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
 	<a href="#three" onclick="allergyAdd();" class="w3-btn w3-grey w3-round"> No </a>
 	</div>
+	<!-- redirected button pointer -->
 	
 </div>	
 	
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
+	<!-- question 3 header -->
 		<h1>Question 3</h1>
 	</div>
 
@@ -140,25 +146,60 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#four" onclick="coldAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
 	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-grey w3-round"> No </a>
 	</div>
+	<!-- redirected button pointer -->
 	
 </div>	
 	
 <div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
+	<!-- question 4 header -->
 		<h1>Question 4</h1>
 	</div>
 
-<!-- cold denoting question -->
+	<!-- cold denoting question -->
 	<div id="content" class="w3-container">
 		<p>Are aches present?</p>
 	<!-- adds 1 to coldCount or allergyCount -->
 	<a href="#five" onclick="coldAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
 	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-grey w3-round"> No </a>
 	</div>
+	<!-- redirected button pointer -->
+</div>	
+<!-- additional question for cold -->	
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+	<!-- question 5 header -->
+		<h1>Question 5</h1>
+	</div>
+
+	<!-- cold denoting question -->
+	<div id="content" class="w3-container">
+		<p> Is nausea present</p>
+	<!-- adds 1 to coldCount or allergyCount -->
+	<a href="#six" onclick="coldAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#six" onclick="allergyAdd();" class="w3-btn w3-grey w3-round"> No </a>
+	</div>
+	<!-- redirected button pointer -->
 	
 </div>	
+<!-- additional question for allergy -->	
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+	<!-- question 6 header -->
+		<h1>Question 6</h1>
+	</div>
+
+	<!-- cold denoting question -->
+	<div id="content" class="w3-container">
+		<p> Are there watery eyes? </p>
+	<!-- adds 1 to coldCount or allergyCount -->
+	<a href="#seven" onclick="allergyAdd();" class="w3-btn w3-grey w3-round"> Yes </a>
+	<a href="#seven" onclick="coldAdd();" class="w3-btn w3-grey w3-round"> No </a>
+	</div>
+	<!-- redirected button pointer -->
+</div>	
 	
-<div class="page" id="five">
+<div class="page" id="seven">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
@@ -166,6 +207,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!-- displays results in HTML -->
 	<div id="content" class="w3-container">
 		<p>You got:</p>
+		<!-- button pointer to results -->
 		<a onclick = "displayResults();" class="w3-btn w3-grey w3-round"> results </a>
 		<p id = "results"></p>
 		
